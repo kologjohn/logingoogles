@@ -1,0 +1,21 @@
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+  "transactions":{
+          ".read":"auth!==null",
+            ".indexOn":["email",],
+               ".write":true,
+         ".validate":"auth!==null"
+            },
+              "sysusers":{
+                ".read":"auth!==null",
+                  ".write":true,
+              },
+                 "sales":{
+          ".read":"auth!==null",
+            ".indexOn":["email",],
+               ".write":true,
+         ".validate":"auth!==null"
+            }
+          }
+}

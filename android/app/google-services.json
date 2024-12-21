@@ -1,0 +1,230 @@
+{
+  "project_info": {
+    "project_number": "314765251666",
+    "firebase_url": "https://goldcalculator-42271.firebaseio.com",
+    "project_id": "goldcalculator-42271",
+    "storage_bucket": "goldcalculator-42271.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:f2d462beb6a133c6947b8b",
+        "android_client_info": {
+          "package_name": "com.kologsoft.asiedunketiah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:9f2f0117bfc8270c947b8b",
+        "android_client_info": {
+          "package_name": "com.kologsoft.collation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:8ec1035e9fc2f589947b8b",
+        "android_client_info": {
+          "package_name": "com.kologsoft.goldcalcus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-3k9f4d3vdpd4jhtivim4j1ho23j26c5j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kologsoft.goldcalcus",
+            "certificate_hash": "cafba666a679a81b53a464ebd02f50815bf7a2c6"
+          }
+        },
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:b14070807d53f0b4947b8b",
+        "android_client_info": {
+          "package_name": "com.kologsoft.golddealer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-0avd3lk3i6bn4eae24rrm6ie234kcnk3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kologsoft.golddealer",
+            "certificate_hash": "451d5bf3b8712db3753a1b83884cf5e8c6b7d870"
+          }
+        },
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:3bcf03a845b9debb947b8b",
+        "android_client_info": {
+          "package_name": "com.kologsoft.googleaccount"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:64b28ed81fc68e2d947b8b",
+        "android_client_info": {
+          "package_name": "com.kologsoft.ndc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314765251666:android:4a44527af6c3c401947b8b",
+        "android_client_info": {
+          "package_name": "com.login.logingoogle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-WUjNKGgvcyrurUJJV6QTIY2UFY0hFc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314765251666-erahk1etdm3p1qo942pckrgcfq264e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
