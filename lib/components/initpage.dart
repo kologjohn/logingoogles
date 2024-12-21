@@ -4,8 +4,9 @@ import 'package:form_validator/form_validator.dart';
 import 'package:provider/provider.dart';
 import '../controller/accounts.dart';
 import 'package:flutter_progress_hud/flutter_progress_hud.dart';
+
 class Initpage extends StatefulWidget {
-  Initpage({super.key});
+  const Initpage({super.key});
 
   @override
   State<Initpage> createState() => _InitpageState();
@@ -32,28 +33,27 @@ class _InitpageState extends State<Initpage> {
   //final _salesform=GlobalKey<FormState>();
   final GlobalKey<FormState> _salesform = GlobalKey<FormState>();
 
-
-
   bool? _validate() {
     _salesform.currentState?.validate();
     return false;
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return   ProgressHUD(
+    return ProgressHUD(
       indicatorColor: Colors.orange,
       child: Consumer<FirebaseAccounts>(
-
         builder: (BuildContext context, data2, Widget? child) {
-          return  Scaffold(
+          return Scaffold(
             backgroundColor: Colors.grey[00],
             appBar: AppBar(
               elevation: 0,
               backgroundColor: Colors.orange,
               centerTitle: true,
-              title:  const Text("Gold Calculator",style: TextStyle(color: Colors.white),),
+              title: const Text(
+                "Gold Calculator",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             body: ListView(
               children: [
@@ -64,13 +64,11 @@ class _InitpageState extends State<Initpage> {
                       key: _salesform,
                       child: Column(
                         children: [
-
                           Card(
                             color: Colors.orange[100],
                             child: Padding(
-                              padding:  const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Column(
-
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -92,22 +90,25 @@ class _InitpageState extends State<Initpage> {
                                         }
                                       },
                                       keyboardType:
-                                      const TextInputType.numberWithOptions(decimal: true),
-
-                                      decoration:  const InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          hintText: "Grams",
-                                          label: Text("Grams",style: TextStyle(fontSize: 20),),
-
+                                          const TextInputType.numberWithOptions(
+                                              decimal: true),
+                                      decoration: const InputDecoration(
+                                        border: OutlineInputBorder(),
+                                        hintText: "Grams",
+                                        label: Text(
+                                          "Grams",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
                                       ),
                                     ),
                                   ),
-
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: TextFormField(
                                       controller: volumetxt,
-                                      validator: ValidationBuilder().minLength(1).build(),
+                                      validator: ValidationBuilder()
+                                          .minLength(1)
+                                          .build(),
                                       onChanged: (value) {
                                         if (value.isNotEmpty) {
                                           volume = double.parse(value);
@@ -120,21 +121,26 @@ class _InitpageState extends State<Initpage> {
                                           total = datalist[4];
                                         }
                                       },
-
-                                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                                      keyboardType:
+                                          const TextInputType.numberWithOptions(
+                                              decimal: true),
                                       decoration: const InputDecoration(
                                         border: OutlineInputBorder(),
-                                        label: Text("Volume",style: TextStyle(fontSize: 20),),
+                                        label: Text(
+                                          "Volume",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
                                         hintText: "Volume",
                                       ),
                                     ),
                                   ),
-
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: TextFormField(
                                       controller: pricettxt,
-                                      validator: ValidationBuilder().minLength(1).build(),
+                                      validator: ValidationBuilder()
+                                          .minLength(1)
+                                          .build(),
                                       onChanged: (value) {
                                         if (value.isNotEmpty) {
                                           price = double.parse(value);
@@ -147,123 +153,159 @@ class _InitpageState extends State<Initpage> {
                                           total = datalist[4];
                                         }
                                       },
-                                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                                      keyboardType:
+                                          const TextInputType.numberWithOptions(
+                                              decimal: true),
                                       decoration: const InputDecoration(
-                                          label: Text("Price",style: TextStyle(fontSize: 20),),
+                                          label: Text(
+                                            "Price",
+                                            style: TextStyle(fontSize: 20),
+                                          ),
                                           hintText: "Price",
-                                          border: OutlineInputBorder()
-                                      ),
-
-
+                                          border: OutlineInputBorder()),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
-
                           Card(
                             color: Colors.orange[100],
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text('Pounds:',
+                                      Text(
+                                        'Pounds:',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
-                                      Text('$pounds',
+                                      Text(
+                                        '$pounds',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
                                     ],
                                   ),
-                                  const Divider(thickness: 1,color: Colors.grey,),
+                                  const Divider(
+                                    thickness: 1,
+                                    color: Colors.grey,
+                                  ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text('Density',
+                                      Text(
+                                        'Density',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
-                                      Text('$density',
+                                      Text(
+                                        '$density',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
                                     ],
                                   ),
-                                  const Divider(thickness: 1,color: Colors.grey,),
-
+                                  const Divider(
+                                    thickness: 1,
+                                    color: Colors.grey,
+                                  ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text('Karat',
+                                      Text(
+                                        'Karat',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
-                                      Text('$karat',
+                                      Text(
+                                        '$karat',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
                                     ],
                                   ),
-                                  const Divider(thickness: 1,color: Colors.grey,),
-
+                                  const Divider(
+                                    thickness: 1,
+                                    color: Colors.grey,
+                                  ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text('Per Pound',
+                                      Text(
+                                        'Per Pound',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
-                                      Text('$perpounds',
+                                      Text(
+                                        '$perpounds',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
                                     ],
                                   ),
-                                  const Divider(thickness: 1,color: Colors.grey,),
+                                  const Divider(
+                                    thickness: 1,
+                                    color: Colors.grey,
+                                  ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text('Total',
+                                      Text(
+                                        'Total',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
-                                      Text('$total',
+                                      Text(
+                                        '$total',
                                         style: TextStyle(
-                                            color: Colors.grey[600], // Set the text color.
+                                            color: Colors.grey[
+                                                600], // Set the text color.
                                             fontSize: 14 // Set the text size.
-                                        ),
+                                            ),
                                       ),
                                     ],
                                   ),
                                 ],
                               ),
                             ),
-
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -271,14 +313,14 @@ class _InitpageState extends State<Initpage> {
                               showLoader: data2.progress,
                               buttonSize: ButtonSize.large,
                               authenticationMethod: AuthenticationMethod.google,
-                              onPressed: () async{
-                              //  await data2.auth.signOut();
-                               // print(data2.progress);
-                                final prog=ProgressHUD.of(context);
+                              onPressed: () async {
+                                //  await data2.auth.signOut();
+                                // print(data2.progress);
+                                final prog = ProgressHUD.of(context);
                                 prog!.showWithText("Please wait...");
                                 data2.googlesignup(context);
-                                 prog.dismiss();
-                               // print("object...");
+                                prog.dismiss();
+                                // print("object...");
                               },
                             ),
                           )
@@ -286,7 +328,6 @@ class _InitpageState extends State<Initpage> {
                       ),
                     ),
                   ),
-
                 ),
               ],
             ),

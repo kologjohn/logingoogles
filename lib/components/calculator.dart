@@ -5,7 +5,7 @@ import '../controller/accounts.dart';
 import 'package:flutter_progress_hud/flutter_progress_hud.dart';
 
 class Calculator extends StatefulWidget {
-  Calculator({super.key});
+  const Calculator({super.key});
 
   @override
   State<Calculator> createState() => _CalculatorState();
@@ -345,7 +345,7 @@ class _CalculatorState extends State<Calculator> {
                                       String? email =
                                           data2.auth.currentUser!.email;
                                       // data2.db.enablePersistence();
-                                       data2.addNewrecord(
+                                      data2.addNewrecord(
                                           grams,
                                           volume,
                                           price,

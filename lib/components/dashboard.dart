@@ -14,7 +14,6 @@ enum SingingCharacter { lafayette, jefferson }
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
-
   @override
   State<Dashboard> createState() => _NavigationExampleState();
 }
@@ -22,14 +21,10 @@ class Dashboard extends StatefulWidget {
 class _NavigationExampleState extends State<Dashboard> {
   int currentPageIndex = 0;
 
-
   late List datalist;
 
   //final _salesform=GlobalKey<FormState>();
   final GlobalKey<FormState> _salesform = GlobalKey<FormState>();
-
-
-
 
   @override
   void initState() {
@@ -43,11 +38,9 @@ class _NavigationExampleState extends State<Dashboard> {
       barrierColor: Colors.black26,
       child: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: 800
-          ),
+          constraints: const BoxConstraints(maxWidth: 800),
           child: Scaffold(
-            backgroundColor:Colors.black ,
+            backgroundColor: Colors.black,
             appBar: AppBar(
               elevation: 1,
               centerTitle: true,
@@ -59,32 +52,44 @@ class _NavigationExampleState extends State<Dashboard> {
               ),
               actions: [
                 PopupMenuButton<String>(
-                  onSelected: (text) async{
-                    if(text=="Logout") {
+                  onSelected: (text) async {
+                    if (text == "Logout") {
                       // final pro=ProgressHUD.of(context);
                       // pro!.showWithText("Please wait..");
 
                       await FirebaseAccounts().logout(context);
-                     // pro!.dismiss();
+                      // pro!.dismiss();
                     }
                   },
                   itemBuilder: (BuildContext context) => [
                     PopupMenuItem<String>(
                       value: 'email',
-                      child: Row(children: [const Icon(Icons.email),Text("${FirebaseAccounts().auth.currentUser?.email}")],),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.email),
+                          Text("${FirebaseAccounts().auth.currentUser?.email}")
+                        ],
+                      ),
                     ),
                     PopupMenuItem<String>(
                       value: 'name',
-                      child: Row(children: [const Icon(Icons.person),Text("${FirebaseAccounts().auth.currentUser?.displayName}")],),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.person),
+                          Text(
+                              "${FirebaseAccounts().auth.currentUser?.displayName}")
+                        ],
+                      ),
                     ),
                     const PopupMenuItem<String>(
                       value: 'Logout',
-                      child: Row(children: [Icon(Icons.logout),Text(' Logout')],),
+                      child: Row(
+                        children: [Icon(Icons.logout), Text(' Logout')],
+                      ),
                     ),
                   ],
                 ),
               ],
-
             ),
             bottomNavigationBar: Theme(
               data: ThemeData.dark(),
@@ -105,7 +110,6 @@ class _NavigationExampleState extends State<Dashboard> {
                     selectedIcon: Icon(
                       Icons.home,
                       color: Colors.amber,
-
                     ),
                     icon: Icon(
                       Icons.home_outlined,
@@ -142,11 +146,8 @@ class _NavigationExampleState extends State<Dashboard> {
                 return <Widget>[
                   Center(
                     child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxWidth:900
-                      ),
-                        child: Home()
-                    ),
+                        constraints: const BoxConstraints(maxWidth: 900),
+                        child: const Home()),
                   ),
                   Calculator(),
                   Container(
@@ -157,7 +158,13 @@ class _NavigationExampleState extends State<Dashboard> {
                   Container(
                     color: Colors.black,
                     alignment: Alignment.center,
-                    child: const Text("Coming Soon..",style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
+                    child: const Text(
+                      "Coming Soon..",
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ][currentPageIndex];
               },
@@ -166,7 +173,5 @@ class _NavigationExampleState extends State<Dashboard> {
         ),
       ),
     );
-
   }
-
 }

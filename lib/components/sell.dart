@@ -5,7 +5,7 @@ import '../controller/accounts.dart';
 import 'package:flutter_progress_hud/flutter_progress_hud.dart';
 
 class Sell extends StatefulWidget {
-  Sell({super.key});
+  const Sell({super.key});
 
   @override
   State<Sell> createState() => _CalculatorState();
@@ -65,7 +65,7 @@ class _CalculatorState extends State<Sell> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   label: Text("Grams"),
                                   border: InputBorder.none),
                             ),

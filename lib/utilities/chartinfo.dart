@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:goldcalcus/utilities/storage_info_card.dart';
 import '../constants.dart';
 
-Widget Chartinfo(){
+Widget Chartinfo() {
   return Container(
     color: Colors.white10,
-    padding: EdgeInsets.all(defaultPadding),
+    padding: const EdgeInsets.all(defaultPadding),
     decoration: const BoxDecoration(
       color: secondaryColor,
       borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -21,7 +21,7 @@ Widget Chartinfo(){
           ),
         ),
         SizedBox(height: defaultPadding),
-       // Pie(context),
+        // Pie(context),
         StorageInfoCard(
           svgSrc: "assets/icons/Documents.svg",
           title: "Documents Files",

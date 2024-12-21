@@ -2,12 +2,14 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-double sales=0.5;
-double purchase=0.5;
+
+double sales = 0.5;
+double purchase = 0.5;
 final List<DataItem> dataSet = [
   DataItem(value: sales, label: "Sale", color: Colors.orange),
   DataItem(value: purchase, label: "Stock", color: Colors.green),
 ];
+
 class DataItem {
   final double value;
   final String label;
@@ -19,7 +21,7 @@ class DataItem {
 class DonutChartWidget extends StatefulWidget {
   final List<DataItem> dataSet;
 
-  const DonutChartWidget(this.dataSet, {Key? key}) : super(key: key);
+  const DonutChartWidget(this.dataSet, {super.key});
 
   @override
   State<DonutChartWidget> createState() => _DonutChartWidgetState();
@@ -105,8 +107,8 @@ class DonutChartPainter extends CustomPainter {
     }
 
     canvas.drawCircle(c, radius * 0.2, midPaint);
-    drawTextCentered(canvas, c, "Grams", textBigStyle,
-        radius * 0.4, (Size sz) {});
+    drawTextCentered(
+        canvas, c, "Grams", textBigStyle, radius * 0.4, (Size sz) {});
   }
 
   TextPainter measureText(String string, TextStyle textStyle, double maxWidth,
@@ -121,7 +123,7 @@ class DonutChartPainter extends CustomPainter {
   Size drawTextCentered(Canvas canvas, Offset position, String text,
       TextStyle textStyle, double maxWidth, Function(Size size) bgCb) {
     final textPainter =
-    measureText(text, textStyle, maxWidth, TextAlign.center);
+        measureText(text, textStyle, maxWidth, TextAlign.center);
     final pos =
         position + Offset(-textPainter.width / 2.0, -textPainter.height / 2.0);
     bgCb(textPainter.size);
